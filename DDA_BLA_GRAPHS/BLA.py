@@ -29,7 +29,7 @@ def bresenham_line(x0, y0, x1, y1):
                 decision += 2 * (dy - dx)
             else:
                 decision += 2 * dy
-    else:  # steep-ish slope (|m| >= 1)
+    else:  
         decision = 2 * dx - dy
         for step in range(dy + 1):
             print(f"> step#{step:04d} -> coord=({x:4},{y:4})  decision={decision:4d}")

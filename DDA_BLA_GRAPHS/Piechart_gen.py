@@ -36,7 +36,6 @@ def generate_sector(cx, cy, radius, start_deg, end_deg, steps=120):
         x = cx + radius * math.cos(angle_rad)
         y = cy + radius * math.sin(angle_rad)
         fan.append((int(round(x)), int(round(y))))
-        # yield a shallow copy to avoid external mutation issues
         yield list(fan)
 
 
@@ -82,7 +81,7 @@ def run():
 
     # create sector generators
     gens = []
-    start = 90.0  # start at 90° so first sector points upward (different orientation)
+    start = 90.0 
     for idx, deg in enumerate(sector_degrees):
         end = start + deg
         print(f"{idx:2d} | {start:7.2f} -> {end:7.2f} | {sector_values[idx]:5d}")

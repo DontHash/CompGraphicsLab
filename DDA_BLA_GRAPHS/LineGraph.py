@@ -10,8 +10,6 @@ points_buffer = []
 
 
 def dda_segment(x0, y0, x1, y1, tag=""):
-    """DDA segment generator. Yields integer pixel coordinates along the segment.
-    tag is a short string used in the trace output to identify the segment."""
     dx = x1 - x0
     dy = y1 - y0
     steps = int(max(abs(dx), abs(dy)))
